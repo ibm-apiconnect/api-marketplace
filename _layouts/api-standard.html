@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  {% include header.html %}
+  <body class="doc-template {{ page.permalink }}">
+    {% include masthead.html %}
+    <div class="grid-container">
+      <div role="main">
+        {{ content }}
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

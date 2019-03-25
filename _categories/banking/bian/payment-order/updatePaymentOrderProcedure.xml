@@ -1,0 +1,11 @@
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="main" xsi:noNamespaceSchemaLocation="http://atm.ibm.com/app/unit.xsd">
+  <requirements>
+  </requirements>
+  <configs>
+  </configs>
+  <sequence name="main">
+    <get url="${endpointUrl}" params="[:]" var="payload" mode="json" gen="rag">
+    </get>
+    <assert-equals expression="payload_response.statusCode" value="200" mode="all" level="error" ifexists="false" stoponfail="false"/>
+  </sequence>
+</unit>

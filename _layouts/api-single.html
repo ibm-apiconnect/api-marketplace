@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  {% include header.html %}
+  <body class="doc-template {{ page.permalink }}">
+    {% include masthead.html %}
+    <div class="grid-container">
+      <div role="main">
+        {{ content }}
+        <div id="api-root"></div>
+      </div>
+    </div>
+    {% include footer.html %}
+    <script src="{% if site.baseurl | size > 1 %}{{site.baseurl | append: '--@@' | remove: '/--@@' | remove: '--@@' }}{% endif %}/dist/scripts/api-view.min.js"></script>
+  </body>
+</html>

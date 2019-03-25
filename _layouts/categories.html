@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  {% include header.html %}
+  <body class="doc-template {{ page.permalink }}">
+    {% include masthead.html %}
+    <div class="grid-x">
+        <div class="sidebar cell small-12 medium-2" data-equalizer>
+            <aside aria-label="sidebar-asid" data-equalizer-watch>
+              <nav aria-label="sidebar" >
+                <ul>
+                {% assign rootCollection = site.categories | group_by: 'parent' %}
+                {% for rootItems in rootCollection %}
+                  {% assign roots = rootItems.items | sort: 'order' %}
+                  {% for root in roots %}
+                    {% if root.parent == 'root' %}
+                      {% if root.extlink != nil %}
+                      <li class="doc-category"><a href="{{ root.extlink}}">{{ root.title }}</a>
+                      {% else %}
+                      <li class="doc-category"><a {% if root.url == page.url %}class="current-page" {% else %} class="default-link" {% endif %} href="{{ root.url | prepend: site.baseurl }}">{{ root.title }}</a>
+                      {% endif %}
+                      <!-- Second level by category-->
+                      {% for docsInCatCollection in rootCollection %}
+                        {% assign docs = docsInCatCollection.items | sort: 'order' %}
+                        {% assign ulPrinted1 = false %}
+                        {% for doc in docs %}
+                          {% if doc.parent == root.pagePath %}      
+                            {% if ulPrinted1 == false %}
+                              <ul>
+                            {% endif %}
+                            {% assign ulPrinted1 = true %}
+                            {% if doc.extlink != nil %}
+                              <li><a href="{{ doc.extlink}}">{{ doc.title }}</a>
+                            {% else %}
+                              <li><a {% if doc.url == page.url %}class="current-page" {% else %} class="default-link" {% endif %} href="{{ doc.url | prepend: site.baseurl }}">{{ doc.title }}</a>
+                            {% endif %}
+                            <!-- Third level by category-->
+                            {% for docsInCatCollection2 in rootCollection %}
+                              {% assign docs2 = docsInCatCollection2.items | sort: 'order' %}
+                              {% assign ulPrinted2 = false %}
+                              {% for doc2 in docs2 %}
+                                {% if doc2.parent == doc.pagePath %}
+                                  {% if ulPrinted2 == false %}
+                                    <ul>
+                                  {% endif %}
+                                  {% assign ulPrinted2 = true %}
+                                  <li><a {% if doc2.url == page.url %}class="current-page" {% else %} class="default-link" {% endif %} href="{{ doc2.url | prepend: site.baseurl }}">{{ doc2.title }}</a></li>
+                                {% endif %}
+                              {% endfor %}
+                              {% if ulPrinted2 == true %}
+                                </ul>
+                              {% endif %}
+                            {% endfor %}
+                            </li>
+                          {% endif %}
+                        {% endfor %}
+                        {% if ulPrinted1 == true %}
+                          </ul>
+                        {% endif %}
+                      {% endfor %}
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+                </ul>
+              </nav>
+            </aside>
+        </div>
+        <!-- /.cell -->
+        <div class="cell content small-12 medium-10" id="doc" data-equalizer-watch>
+
+        <div role="main">
+          {{ content }}
+        </div>
+        </div>
+        <!-- /.cell -->
+    </div>
+    <!-- /.grid-x -->
+    {% include footer.html %}
+  </body>
+</html>
