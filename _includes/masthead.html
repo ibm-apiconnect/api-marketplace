@@ -3,7 +3,12 @@
   <div class="grid-x">
       <div class="cell small-10 medium-9 large-6 small-order-2 medium-order-1">
           <a class="header-link" href="{{site.baseurl}}/">
+            {% if page.home == true %}
             <img src="{{site.baseurl}}/dist/images/logos/api-standards-logo.svg" alt="API Standards logo" class="logo"><img src="{{site.baseurl}}/dist/images/api-standards-header.svg" alt="API Standards logo" class="logo-heading">
+            {% else %}
+            <img src="{{site.baseurl}}/dist/images/logos/api-standards-logo-white.svg" alt="API Standards logo" class="logo">
+            <h1>API Standards</h1>
+            {% endif %}
           </a>
       </div>
       <div class="cell small-1 medium-3 large-6 small-order-1 medium-order-2">

@@ -3,6 +3,7 @@ email: test@atm.ibm.com
 description: IBM API Connect - API Marketplace
 keywords: IBM, docker, container, devops, applications, development, iteration, microservices, cloud, ICP, services, rapid, integrated
 repository: github.com:ibm-apiconnect/api-marketplace
+dashboard-url: https://us-east.apitest.apiconnect.ibmcloud.com/app/
 
 # Build settings
 markdown: kramdown

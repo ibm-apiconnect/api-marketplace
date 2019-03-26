@@ -10,6 +10,15 @@
       </div>
     </div>
     {% include footer.html %}
+    <script id="page-data" type="application/json">
+    {
+      "dashboardURL": "{{ site.dashboard-url }}",
+      "back": {
+        "url": "{% if site.baseurl %}{{ site.baseurl}}/{% endif %}{{ page.parent }}",
+        "title": "{{ page.parent-title }}"
+      }
+    }
+    </script>
     <script src="{% if site.baseurl | size > 1 %}{{site.baseurl | append: '--@@' | remove: '/--@@' | remove: '--@@' }}{% endif %}/dist/scripts/api-view.min.js"></script>
   </body>
 </html>

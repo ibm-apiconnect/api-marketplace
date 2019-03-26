@@ -4,7 +4,7 @@ title: API Standards
 description: IBM API Standards
 keywords: getting started, API standards, categories, banking, financial, health
 auto_ids: true
-type: document
+type: categories
 pagePath: categories
 parent: root
 ---
