@@ -16,6 +16,12 @@
       "back": {
         "url": "{% if site.baseurl %}{{ site.baseurl}}/{% endif %}{{ page.parent }}",
         "title": "{{ page.parent-title }}"
+      },
+      "api": {
+        "logo": "{{site.baseurl}}{{ page.api-logo }}",
+        "execSummary": "{{ page.api-exec-summary }}",
+        "exampleUse": "{{ page.api-example-use }}",
+        "publishedBy": "{{ page.api-published-by }}"
       }
     }
     </script>

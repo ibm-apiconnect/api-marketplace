@@ -12,20 +12,21 @@
     </put>
     <assert-exists expression="payload"  mode="all" level="error" stoponfail="false" gen="jag"/>
     <assert-exists expression="payload.date"  mode="all" level="error" stoponfail="false" gen="jag"/>
-    <assert-exists expression="payload.payerProductInstanceReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
     <assert-exists expression="payload.amount"  mode="all" level="error" stoponfail="false" gen="jag"/>
-    <assert-exists expression="payload.paymentOrderUpdateDescription"  mode="all" level="error" stoponfail="false" gen="jag"/>
-    <assert-exists expression="payload.paymentOrderInitiatorReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
     <assert-exists expression="payload.payeeReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
     <assert-exists expression="payload.payeeProductInstanceReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
     <assert-exists expression="payload.payerBankReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
     <assert-exists expression="payload.payeeBankReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
-    <assert-exists expression="payload.paymentOrderUpdateReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
-    <assert-exists expression="payload.paymentOrderUpdateResult"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.paymentTransactionRequestReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.paymentTransactionUpdateReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.paymentTransactionUpdateResult"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.paymentExecutionTransaction"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.paymentTransactionInitiatorReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
     <assert-exists expression="payload.dateType"  mode="all" level="error" stoponfail="false" gen="jag"/>
     <assert-exists expression="payload.payerReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
     <assert-exists expression="payload.currency"  mode="all" level="error" stoponfail="false" gen="jag"/>
-    <assert-exists expression="payload.paymentOrderRequestReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.paymentTransaction"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.paymentTransactionUpdateDescription"  mode="all" level="error" stoponfail="false" gen="jag"/>
     <assert-exists expression="payload.paymentMechanism"  mode="all" level="error" stoponfail="false" gen="jag"/>
   </sequence>
 </unit>

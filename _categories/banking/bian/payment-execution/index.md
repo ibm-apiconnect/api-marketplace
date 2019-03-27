@@ -8,6 +8,10 @@ duration:
 type: document
 order: 2
 parent: /categories/banking/bian
+api-logo: /dist/images/logos/bian_logo.svg
+api-exec-summary: This service domains processes the movement of funds between accounts within the bank or to/from an account held with another bank, selecting the appropriate payment mechanism
+api-example-use: Funds are transferred from a customer's account with the bank to a payee account held at another bank
+api-published-by: Bianuser05 Team
 ---
 <script id="api-spec" type="application/json">
 {
