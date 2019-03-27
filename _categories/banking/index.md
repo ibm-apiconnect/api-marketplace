@@ -15,10 +15,10 @@ parent: categories
           <div class="card" data-equalizer-watch>
               <div class="card_content">
                 <div class="grid-x">
-                  <div class="cell large-2 medium-3 small-4">
+                  <div class="cell large-2 medium-3 small-12">
                     <img class="standards-logo" src="{{ site.baseurl }}/dist/images/logos/bian_logo.svg" />
                   </div>
-                  <div class="cell large-10 medium-9 small-8">
+                  <div class="cell large-10 medium-9 small-12">
                     <div class="card_title">BIAN</div>
                     <p>Find API Standards and APIs tht comply with BIAN, PSD2 and all your other banking and financial market needs.</p>
                   </div>
@@ -31,10 +31,10 @@ parent: categories
           <div class="card" data-equalizer-watch>
               <div class="card_content">
                 <div class="grid-x">
-                  <div class="cell large-2 medium-3 small-4">
+                  <div class="cell large-2 medium-3 small-12">
                     <img class="standards-logo" src="{{ site.baseurl }}/dist/images/logos/psd2_logo.svg" />
                   </div>
-                  <div class="cell large-10 medium-9 small-8">
+                  <div class="cell large-10 medium-9 small-12">
                     <div class="card_title">PSD2</div>
                     <p>Find API Standards and APIs tht comply with BIAN, PSD2 and all your other banking and financial market needs.</p>
                   </div>
