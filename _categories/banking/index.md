@@ -9,12 +9,11 @@ order: 2
 pagePath: categories/banking
 parent: categories
 ---
-<div class="grid-container">
   <div class="grid-x grid-margin-x" data-equalizer>
     <div class="cell">
       <h2>Banking and Financial Markets</h2>
     </div>
-    <div class="cell large-12">
+    <div class="cell">
         <div class="card" data-equalizer-watch>
             <div class="card_content">
               <div class="grid-x">
@@ -30,7 +29,7 @@ parent: categories
             </div>
         </div>
     </div>
-    <div class="cell large-12">
+    <div class="cell">
         <div class="card" data-equalizer-watch>
             <div class="card_content">
               <div class="grid-x">
@@ -40,4 +39,3 @@ parent: categories
         </div>
     </div>
   </div>
-</div>
