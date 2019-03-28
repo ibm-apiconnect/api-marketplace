@@ -1,0 +1,34 @@
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="main" xsi:noNamespaceSchemaLocation="http://atm.ibm.com/app/unit.xsd">
+  <requirements>
+  </requirements>
+  <configs>
+  </configs>
+  <sequence name="main">
+    <post url="${protocol}${domain}${basePath}${endpoint}" params="[:]" var="payload" mode="json" gen="e2f">
+      <postBody contentType="text/plain" gen="e2f">
+        <![CDATA[]]>
+      </postBody>
+      <header name="Accept" value="application/json" gen="e2f"/>
+    </post>
+    <assert-exists expression="payload"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.merchantAcquiringClearingTaskReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.productInstanceReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionRecordReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionProductInstanceReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionNetworkReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionIssuingBankReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionMerchantAcquiringBankReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionType"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionCurrency"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionAmountType"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionAmount"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionMerchantReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionLocationReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionProductServiceReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionDateTime"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionFXConversionCharge"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionInterchargeFee"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cardTransactionAuthorizationRecord"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.merchantAcquiringClearingTaskRecord"  mode="all" level="error" stoponfail="false" gen="jag"/>
+  </sequence>
+</unit>

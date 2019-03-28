@@ -1,0 +1,20 @@
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="main" xsi:noNamespaceSchemaLocation="http://atm.ibm.com/app/unit.xsd">
+  <requirements>
+  </requirements>
+  <configs>
+  </configs>
+  <sequence name="main">
+    <get url="${protocol}${domain}${basePath}${endpoint}" params="[:]" var="payload" mode="json" gen="e2f">
+      <header name="Accept" value="application/json" gen="e2f"/>
+    </get>
+    <assert-exists expression="payload"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.merchantAcquiringAccountAccessReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.productInstanceReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.merchantAcquiringFacilityAccountReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.merchantAcquiringAccountPostingPurpose"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.merchantAcquiringAccountPostingAmount"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.merchantAcquiringAccountPostingValueDate"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.merchantAcquiringAccountPostingResult"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.merchantAcquiringAccountAccessRecord"  mode="all" level="error" stoponfail="false" gen="jag"/>
+  </sequence>
+</unit>

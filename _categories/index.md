@@ -8,12 +8,11 @@ type: categories
 pagePath: categories
 parent: root
 ---
-<!-- add a docs overview with permalink:documentation and then change this in the top menu links -->
+## API Standards Categories
+Browse through APIs and standards in different markets, list API operations, and run them in IBM API Connect Test & Monitor.
 
-# Categories landing page
-Main categories list
+We currently support APIs for standards in the following categories, with much more to be added soon:
 
-To quickly get up and running, see the following pages:
 
-* [Banking]({{ site.baseurl }}/{{ page.pagePath }}/banking)
-* [Health]({{ site.baseurl }}/{{ page.pagePath }}/health)
+### [Banking and Financial Markets](/categories/banking)
+### [Communications](/categories/communication)

@@ -37,5 +37,15 @@ parent: categories/banking
             </div>
         </div>
       </div>
+      <div class="cell large-6 medium-6 small-12">
+        <div class="card" data-equalizer-watch>
+            <div class="card_content">
+              <div class="card_title">
+                <a href="{{ site.baseurl }}/{{ page.parent }}/bian/merchant-acquiring-facility"><img class="api-logo" src="{{ site.baseurl }}/dist/images/logos/bian_logo.svg" />Merchant Acquiring Facility</a>
+              </div>
+              <p>Find API Standards and APIs tht comply with BIAN, PSD2 and all your other banking and financial market needs.</p>
+            </div>
+        </div>
+      </div>
   </div>
 </div>
