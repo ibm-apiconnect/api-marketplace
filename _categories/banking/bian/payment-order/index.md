@@ -9,7 +9,7 @@ type: document
 order: 2
 parent: /categories/banking/bian
 api-logo: /dist/images/logos/bian_logo.svg
-api-exec-summary: This service domain handles the bank-side processing of funds transfers, making the necessary bank and regulatory checks on the involved parties and applying their payment preferences where appropriate
+api-summary: This service domain handles the bank-side processing of funds transfers, making the necessary bank and regulatory checks on the involved parties and applying their payment preferences where appropriate
 api-example-use: A customer transaction results in the generation of a payment order to transfer funds to an account in another bank
 api-published-by: Bianuser05 Team
 ---
