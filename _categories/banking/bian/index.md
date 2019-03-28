@@ -17,7 +17,7 @@ parent: categories/banking
         <h2>BIAN APIs</h2>
         <p>Banking Industry Architecture Network (BIAN) is an organization set up to establish and promote a common architectural framework for enabling banking interoperability.</p>
       </div>
-      <div class="cell large-6 medium-6 small-12">
+      <div class="cell large-6 medium-12 small-12">
         <div class="card" data-equalizer-watch>
             <div class="card_content">
               <div class="card_title">
@@ -27,7 +27,7 @@ parent: categories/banking
             </div>
         </div>
       </div>
-      <div class="cell large-6 medium-6 small-12">
+      <div class="cell large-6 medium-12 small-12">
         <div class="card" data-equalizer-watch>
             <div class="card_content">
               <div class="card_title">
@@ -37,7 +37,7 @@ parent: categories/banking
             </div>
         </div>
       </div>
-      <div class="cell large-6 medium-6 small-12">
+      <div class="cell large-6 medium-12 small-12">
         <div class="card" data-equalizer-watch>
             <div class="card_content">
               <div class="card_title">

@@ -17,7 +17,7 @@ parent: categories/communication
         <h2>TM Forum APIs</h2>
         <p>TM Forum is a non-profit industry association for service providers and their suppliers in the telecommunications industry. Members include communications and digital service providers, telephone companies, cable operators, network operators, software suppliers, equipment suppliers, systems integrators and management consultancies. Amongst other tools, they provide REST based Open APIs to help its members in their digital transformation initiatives.</p>
       </div>
-      <div class="cell large-6 medium-6 small-12">
+      <div class="cell large-6 medium-12 small-12">
         <div class="card" data-equalizer-watch>
             <div class="card_content">
               <div class="card_title">
