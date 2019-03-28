@@ -4,7 +4,7 @@ title: Communications
 description: Communications API Standards
 keywords: 
 duration: 
-type: document
+type: category
 order: 2
 pagePath: categories/communication
 parent: categories

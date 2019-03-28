@@ -4,7 +4,7 @@ title: Banking & Financial
 description: Banking and Financial Markets API Standards
 keywords: 
 duration: 
-type: document
+type: category
 order: 2
 pagePath: categories/banking
 parent: categories

@@ -1,0 +1,31 @@
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="main" xsi:noNamespaceSchemaLocation="http://atm.ibm.com/app/unit.xsd">
+  <requirements>
+  </requirements>
+  <configs>
+  </configs>
+  <sequence name="main">
+    <put url="${protocol}${domain}${basePath}${endpoint}" params="[:]" var="payload" mode="json" gen="e2f">
+      <putBody contentType="text/plain" gen="e2f">
+        <![CDATA[]]>
+      </putBody>
+      <header name="Accept" value="application/json" gen="e2f"/>
+    </put>
+    <assert-exists expression="payload"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.fraudModelModelReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.fraudModelModel"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.fraudModelModelDesignTaskReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.fraudModelModelDesignTaskRecord"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerMarketDataServiceReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerMarketDataReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.productServiceActivityReportReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.productServiceActivityReport"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.fraudModelModelType"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.fraudModelModelUsage"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.fraudModelModelImpact"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.fraudModelModelFeedbackRecord"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.fraudModelModelSpecification"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.fraudModelModelOperationalRequirements"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.fraudModelModelAllowedUsage"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.fraudModelModelUsageGuidelines"  mode="all" level="error" stoponfail="false" gen="jag"/>
+  </sequence>
+</unit>

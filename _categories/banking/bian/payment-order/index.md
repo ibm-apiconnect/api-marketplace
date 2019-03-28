@@ -1,12 +1,13 @@
 ---
 layout: api-single
-title: BIAN Banking APIs - Payment Order
+title: Payment Order
 parent-title: BIAN APIs
 description: Banking API Standards - APIs - Payment Order
 keywords: 
 duration: 
-type: document
-order: 2
+type: api
+standard: bian
+order: 1
 parent: /categories/banking/bian
 api-logo: /dist/images/logos/bian_logo.svg
 api-summary: This service domain handles the bank-side processing of funds transfers, making the necessary bank and regulatory checks on the involved parties and applying their payment preferences where appropriate

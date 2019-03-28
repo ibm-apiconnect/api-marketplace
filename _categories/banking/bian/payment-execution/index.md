@@ -1,11 +1,12 @@
 ---
 layout: api-single
-title: BIAN Banking APIs - Payment Execution
+title: Payment Execution
 parent-title: BIAN APIs
 description: Banking API Standards - APIs - Payment Execution
 keywords: 
 duration: 
-type: document
+type: api
+standard: bian
 order: 2
 parent: /categories/banking/bian
 api-logo: /dist/images/logos/bian_logo.svg

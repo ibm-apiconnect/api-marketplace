@@ -1,12 +1,13 @@
 ---
 layout: api-single
-title: BIAN Banking APIs - Merchant Acquiring Facility
+title: Merchant Acquiring Facility
 parent-title: BIAN APIs
 description: Banking API Standards - APIs - Merchant Acquiring Facility
 keywords: 
 duration: 
-type: document
-order: 2
+type: api
+standard: bian
+order: 3
 parent: /categories/banking/bian
 api-logo: /dist/images/logos/bian_logo.svg
 api-summary: This service domain orchestrates the activities related to Merchant fulfillment, Merchant Account maintenance, Merchant transactional activities and settlement, including the billing of merchant fees and charges

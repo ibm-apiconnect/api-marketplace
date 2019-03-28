@@ -1,12 +1,13 @@
 ---
 layout: api-single
-title: TM Forum APIs - Account Management
+title: Account Management
 parent-title: TM Forum APIs
 description: TM Forum APIs - Account Management
 keywords: 
 duration: 
-type: document
-order: 2
+type: api
+standard: tmforum
+order: 1
 parent: /categories/communication/tmforum
 api-logo: /dist/images/logos/tmforum_logo.svg
 api-summary: Provides standardized mechanism for the management of billing and settlement accounts, as well as for financial accounting (account receivable) either in B2B or B2B2C contexts
