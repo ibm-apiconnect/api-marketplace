@@ -1,0 +1,25 @@
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="main" xsi:noNamespaceSchemaLocation="http://atm.ibm.com/app/unit.xsd">
+  <requirements>
+  </requirements>
+  <configs>
+  </configs>
+  <sequence name="main">
+    <get url="${protocol}${domain}${basePath}${endpoint}" params="[:]" var="payload" mode="json" gen="e2f">
+      <header name="Content-Type" value="application/json" gen="e2f"/>
+      <header name="Accept" value="application/json" gen="e2f"/>
+    </get>
+    <assert-exists expression="payload"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.channelDeviceType"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.accessedProductService"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerEventLogReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerServicingEventReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.dateTimeLocation"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerServicingEventResult"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerContactDialogueRecordReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload[&apos;employeeUnit Reference&apos;]"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerServicingEventRecord"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.contactResult"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerServicingEventType"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.contactPurpose"  mode="all" level="error" stoponfail="false" gen="jag"/>
+  </sequence>
+</unit>

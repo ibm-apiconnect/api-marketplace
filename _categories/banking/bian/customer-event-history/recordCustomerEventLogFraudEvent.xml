@@ -1,0 +1,25 @@
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="main" xsi:noNamespaceSchemaLocation="http://atm.ibm.com/app/unit.xsd">
+  <requirements>
+  </requirements>
+  <configs>
+  </configs>
+  <sequence name="main">
+    <post url="${protocol}${domain}${basePath}${endpoint}" params="[:]" var="payload" mode="json" gen="e2f">
+      <postBody contentType="application/json" gen="e2f">
+        <![CDATA[{
+  "accessedProductService": "referenced products/services if provided",
+  "employeeUnitReference": "EUR736464",
+  "customerFraudCaseEventType": "stolen card",
+  "fraudCaseReference": "FCR736474",
+  "dateTimeLocation": "2018-03-28 12:30:00 CST Dallas USA",
+  "customerContactDialogueRecordReference": "CDRR737464"
+}]]>
+      </postBody>
+      <header name="Content-Type" value="application/json" gen="e2f"/>
+      <header name="Accept" value="application/json" gen="e2f"/>
+    </post>
+    <assert-exists expression="payload"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.recordingRecordReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerFraudEventResult"  mode="all" level="error" stoponfail="false" gen="jag"/>
+  </sequence>
+</unit>

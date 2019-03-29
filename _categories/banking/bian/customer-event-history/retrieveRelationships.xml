@@ -1,0 +1,21 @@
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="main" xsi:noNamespaceSchemaLocation="http://atm.ibm.com/app/unit.xsd">
+  <requirements>
+  </requirements>
+  <configs>
+  </configs>
+  <sequence name="main">
+    <get url="${protocol}${domain}${basePath}${endpoint}" params="[:]" var="payload" mode="json" gen="e2f">
+      <header name="Content-Type" value="application/json" gen="e2f"/>
+      <header name="Accept" value="application/json" gen="e2f"/>
+    </get>
+    <assert-exists expression="payload"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerRelationshipEventRecord"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerRelationshipEventType"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerEventLogReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.employeeUnitReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerRelationshipEventAction"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.dateTimeLocation"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerRelationshipEventReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerRelationshipEventResult"  mode="all" level="error" stoponfail="false" gen="jag"/>
+  </sequence>
+</unit>

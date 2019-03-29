@@ -1,0 +1,23 @@
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="main" xsi:noNamespaceSchemaLocation="http://atm.ibm.com/app/unit.xsd">
+  <requirements>
+  </requirements>
+  <configs>
+  </configs>
+  <sequence name="main">
+    <get url="${protocol}${domain}${basePath}${endpoint}" params="[:]" var="payload" mode="json" gen="e2f">
+      <header name="Content-Type" value="application/json" gen="e2f"/>
+      <header name="Accept" value="application/json" gen="e2f"/>
+    </get>
+    <assert-exists expression="payload"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.productActionEventType"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.productInstanceReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerProductServiceEventResult"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerEventLogReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.employeeUnitReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.dateTimeLocation"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerProductEventReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.productActionEventDescription"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerProductServiceEventRecord"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.productActionEventResult"  mode="all" level="error" stoponfail="false" gen="jag"/>
+  </sequence>
+</unit>

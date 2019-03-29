@@ -1,0 +1,34 @@
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="main" xsi:noNamespaceSchemaLocation="http://atm.ibm.com/app/unit.xsd">
+  <requirements>
+  </requirements>
+  <configs>
+  </configs>
+  <sequence name="main">
+    <post url="${protocol}${domain}${basePath}${endpoint}" params="[:]" var="payload" mode="json" gen="e2f">
+      <postBody contentType="application/json" gen="e2f">
+        <![CDATA[{
+  "customerCreditRatingSchedule": "update schedule",
+  "customerCreditRatingAssessment": "internal bank credit rating/assessment",
+  "internalCreditAnalysisReportReference": "ICARR980",
+  "ratingAgencyCreditReportReference": "RACRR538",
+  "customerReference": "CR1234",
+  "customerCreditRatingNarrative": "structured report outlining basis for rating",
+  "customerCreditRatingAssessmentType": "corporate",
+  "customerBehaviorModel": "model2"
+}]]>
+      </postBody>
+      <header name="Content-Type" value="application/json" gen="e2f"/>
+      <header name="Accept" value="application/json" gen="e2f"/>
+    </post>
+    <assert-exists expression="payload"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerCreditRatingSchedule"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerCreditRatingAssessment"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.internalCreditAnalysisReportReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.ratingAgencyCreditReportReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerCreditRatingNarrative"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerCreditRatingAssessmentType"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerCreditRatingAssessmentReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerBehaviorModel"  mode="all" level="error" stoponfail="false" gen="jag"/>
+  </sequence>
+</unit>
