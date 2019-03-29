@@ -1,0 +1,45 @@
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="main" xsi:noNamespaceSchemaLocation="http://atm.ibm.com/app/unit.xsd">
+  <requirements>
+  </requirements>
+  <configs>
+  </configs>
+  <sequence name="main">
+    <put url="${protocol}${domain}${basePath}${endpoint}" params="[:]" var="payload" mode="json" gen="e2f">
+      <putBody contentType="application/json" gen="e2f">
+        <![CDATA[{
+  "dateofIncorporation": "08/08/2018",
+  "legalEntityReference": "47654676",
+  "headquartersLocation": "Headquarters Location",
+  "taxIdentifier": "Tax Identifier",
+  "jurisdictionofIncorporation": "Jurisdiction of Incorporation",
+  "contactAddressDetails": "Contact Address Details",
+  "sectorsofOperation": "Sectors of Operation",
+  "primaryRegulator": "Primary Regulator",
+  "registeredAddress": "Address",
+  "registrationAuthority": "Registration Authority",
+  "legalEntityOfficialName": "Entity Official Name",
+  "legalEntityType": "T2",
+  "contactRole": "contact Role"
+}]]>
+      </putBody>
+      <header name="Content-Type" value="application/json" gen="e2f"/>
+      <header name="Accept" value="application/json" gen="e2f"/>
+    </put>
+    <assert-exists expression="payload"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.dateofIncorporation"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.referenceDirectoryEntryReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.legalEntityReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.headquartersLocation"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.taxIdentifier"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.jurisdictionofIncorporation"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.partyDirectoryEntryReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.contactAddressDetails"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.sectorsofOperation"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.primaryRegulator"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.registeredAddress"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.registrationAuthority"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.legalEntityOfficialName"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.legalEntityType"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.contactRole"  mode="all" level="error" stoponfail="false" gen="jag"/>
+  </sequence>
+</unit>

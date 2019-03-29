@@ -1,0 +1,38 @@
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="main" xsi:noNamespaceSchemaLocation="http://atm.ibm.com/app/unit.xsd">
+  <requirements>
+  </requirements>
+  <configs>
+  </configs>
+  <sequence name="main">
+    <post url="${protocol}${domain}${basePath}${endpoint}" params="[:]" var="payload" mode="json" gen="e2f">
+      <postBody contentType="text/plain" gen="e2f">
+        <![CDATA[]]>
+      </postBody>
+      <header name="Accept" value="application/json" gen="e2f"/>
+    </post>
+    <assert-exists expression="payload"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.socialNetworkContacts"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.corporateCustomerLegalEntityReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.referenceDirectoryEntryReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.corporateCustomerReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerNameSalutation"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.companyOfficerReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.dateOfBirth"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerReferenceRecord"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerSinceDate"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.companyOfficerRole"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.governmentIssuedIdentityReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.residencyStatus"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-is expression="payload.emailAddress" type="email" mode="all" level="error" ifexists="false" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.politicalExposureRecord"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.corporateAddress"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerLegalEntityReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.nationality"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.cellPhoneNumber"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerReferenceDataDirectoryEntryReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.politicalExposureType"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.customerReference"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.residentialAddress"  mode="all" level="error" stoponfail="false" gen="jag"/>
+    <assert-exists expression="payload.governmentIssuedDocumentDetails"  mode="all" level="error" stoponfail="false" gen="jag"/>
+  </sequence>
+</unit>
