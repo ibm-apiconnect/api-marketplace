@@ -14,5 +14,5 @@ Browse through APIs and standards in different markets, list API operations, and
 We currently support APIs for standards in the following categories, with much more to be added soon:
 
 
-### [Banking and Financial Markets](/categories/banking)
-### [Communications](/categories/communication)
+### [Banking and Financial Markets]({{ site.baseurl }}/categories/banking)
+### [Communications]({{ site.baseurl }}/categories/communication)
